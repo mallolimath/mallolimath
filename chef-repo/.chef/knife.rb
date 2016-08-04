@@ -7,3 +7,5 @@ node_name                "mallolimath"
 client_key               "#{current_dir}/mallolimath.pem"
 chef_server_url          "https://172.28.3.135/organizations/4thcoffee"
 cookbook_path            ["#{current_dir}/../cookbooks"]
+
+

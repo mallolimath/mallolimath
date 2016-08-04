@@ -1,0 +1,7 @@
+name 'ckbklnt'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures ckbklnt'
+long_description 'Installs/Configures ckbklnt'
+version '0.1.0'

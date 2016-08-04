@@ -1,0 +1,469 @@
+Script started on Mon 01 Aug 2016 03:39:29 PM IST
+]0;root@localhost:~[?1034h[root@localhost ~]# mkdir [K[Kr madhavi
+]0;root@localhost:~[root@localhost ~]# cd madhavi
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git init
+Initialized empty Git repository in /root/madhavi/.git/
+]0;root@localhost:~/madhavi[root@localhost madhavi]# get statu[K[K[K[K[K[K[K[Kit status
+# On branch master
+#
+# Initial commit
+#
+nothing to commit (create/copy files and use "git add" to track)
+]0;root@localhost:~/madhavi[root@localhost madhavi]# touch first.java
+]0;root@localhost:~/madhavi[root@localhost madhavi]# gets[K[K[Kit status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	first.java
+nothing added to commit but untracked files present (use "git add" to track)
+]0;root@localhost:~/madhavi[root@localhost madhavi]# get add first.java
+bash: get: command not found...
+Similar commands are::
+'git'
+'GET'
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git add first.java
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   first.java
+#
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git commit -m:[K"this is first code"
+[master (root-commit) 6765bbb] this is first code
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first.java
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git status
+# On branch master
+nothing to commit, working directory clean
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git log
+[?1h=commit 6765bbb7a81b69f7999bdac8824ff6ce6e438449[m
+Author: Barani Kumar <barani.v@lntinfotech.com>[m
+Date:   Mon Aug 1 15:40:53 2016 +0530[m
+[m
+    this is first code[m
+[K[?1l>]0;root@localhost:~/madhavi[root@localhost madhavi]# git rm first.java
+rm 'first.java'
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git rm first.javalog[Kstatuscommit -m"this is first code"status[Kadd first.java[8Pstatus
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	deleted:    first.java
+#
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git log
+[?1h=commit 6765bbb7a81b69f7999bdac8824ff6ce6e438449[m
+Author: Barani Kumar <barani.v@lntinfotech.com>[m
+Date:   Mon Aug 1 15:40:53 2016 +0530[m
+[m
+    this is first code[m
+[K[?1l>]0;root@localhost:~/madhavi[root@localhost madhavi]# touch first.java
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git add first.java
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git status
+# On branch master
+nothing to commit, working directory clean
+]0;root@localhost:~/madhavi[root@localhost madhavi]# vi
+[?1049h[?1h=[1;44r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[2;1H[1m[34m~                                                                                                                                                                       [3;1H~                                                                                                                                                                       [4;1H~                                                                                                                                                                       [5;1H~                                                                                                                                                                       [6;1H~                                                                                                                                                                       [7;1H~                                                                                                                                                                       [8;1H~                                                                                                                                                                       [9;1H~                                                                                                                                                                       [10;1H~                                                                                                                                                                       [11;1H~                                                                                                                                                                       [12;1H~                                                                                                                                                                       [13;1H~                                                                                                                                                                       [14;1H~                                                                                                                                                                       [15;1H~                                                                                                                                                                       [16;1H~                                                                                                                                                                       [17;1H~                                                                                                                                                                       [18;1H~                                                                                                                                                                       [19;1H~                                                                                                                                                                       [20;1H~                                                                                                                                                                       [21;1H~                                                                                                                                                                       [22;1H~                                                                                                                                                                       [23;1H~                                                                                                                                                                       [24;1H~                                                                                                                                                                       [25;1H~                                                                                                                                                                       [26;1H~                                                                                                                                                                       [27;1H~                                                                                                                                                                       [28;1H~                                                                                                                                                                       [29;1H~                                                                                                                                                                       [30;1H~                                                                                                                                                                       [31;1H~                                                                                                                                                                       [32;1H~                                                                                                                                                                       [33;1H~                                                                                                                                                                       [34;1H~                                                                                                                                                                       [35;1H~                                                                                                                                                                       [36;1H~                                                                                                                                                                       [37;1H~                                                                                                                                                                       [38;1H~                                                                                                                                                                       [39;1H~                                                                                                                                                                       [40;1H~                                                                                                                                                                       [41;1H~                                                                                                                                                                       [42;1H~                                                                                                                                                                       [43;1H~                                                                                                                                                                       [m[16;76HVIM - Vi IMproved[18;77Hversion 7.4.160[19;73Hby Bram Moolenaar et al.[20;68HModified by [34m<bugzilla@redhat.com>[m[21;63HVim is open source and freely distributable[23;70HHelp poor children in Uganda![24;62Htype  :help iccf[34m<Enter>[m       for information [26;62Htype  :q[34m<Enter>[m               to exit         [27;62Htype  :help[34m<Enter>[m  or  [34m<F1>[m  for on-line help[28;62Htype  :help version7[34m<Enter>[m   for version info[1;1H[?12l[?25h[?25l[44;1H:[?12l[?25hq![?25l[44;1H[K[44;1H[?1l>[?12l[?25h[?1049l]0;root@localhost:~/madhavi[root@localhost madhavi]# pwd
+/root/madhavi
+]0;root@localhost:~/madhavi[root@localhost madhavi]# ls -ltr
+total 0
+-rw-r--r--. 1 root root 0 Aug  1 15:42 first.java
+]0;root@localhost:~/madhavi[root@localhost madhavi]# vi
+[?1049h[?1h=[1;44r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[2;1H[1m[34m~                                                                                                                                                                       [3;1H~                                                                                                                                                                       [4;1H~                                                                                                                                                                       [5;1H~                                                                                                                                                                       [6;1H~                                                                                                                                                                       [7;1H~                                                                                                                                                                       [8;1H~                                                                                                                                                                       [9;1H~                                                                                                                                                                       [10;1H~                                                                                                                                                                       [11;1H~                                                                                                                                                                       [12;1H~                                                                                                                                                                       [13;1H~                                                                                                                                                                       [14;1H~                                                                                                                                                                       [15;1H~                                                                                                                                                                       [16;1H~                                                                                                                                                                       [17;1H~                                                                                                                                                                       [18;1H~                                                                                                                                                                       [19;1H~                                                                                                                                                                       [20;1H~                                                                                                                                                                       [21;1H~                                                                                                                                                                       [22;1H~                                                                                                                                                                       [23;1H~                                                                                                                                                                       [24;1H~                                                                                                                                                                       [25;1H~                                                                                                                                                                       [26;1H~                                                                                                                                                                       [27;1H~                                                                                                                                                                       [28;1H~                                                                                                                                                                       [29;1H~                                                                                                                                                                       [30;1H~                                                                                                                                                                      Script started on Mon 01 Aug 2016 04:19:12 PM IST
+]0;root@localhost:~/madhavi[?1034h[root@localhost madhavi]# git config user.name "Madhavi"
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git config user.name "madhavi.allolimath@lntinfotech.com"
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git [K[K[K[Ktouc[K[Kuch unix.sh
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git add unix.sh
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git commit[K[Kit -m:[K"this is shell scriopt[K[K[Kpy"
+[master 26272ec] this is shell scripy
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 unix.sh
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	madhavi.log
+nothing added to commit but untracked files present (use "git add" to track)
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git log
+[?1h=commit 26272ec8ec87d25b0086a27704c61fde845394cb[m
+Author: madhavi.allolimath@lntinfotech.com <barani.v@lntinfotech.com>[m
+Date:   Mon Aug 1 16:20:25 2016 +0530[m
+[m
+    this is shell scripy[m
+[m
+commit 6765bbb7a81b69f7999bdac8824ff6ce6e438449[m
+Author: Barani Kumar <barani.v@lntinfotech.com>[m
+Date:   Mon Aug 1 15:40:53 2016 +0530[m
+[m
+    this is first code[m
+[K[?1l>]0;root@localhost:~/madhavi[root@localhost madhavi]# git config user.email "madhavi.allolimath@lntinfotech.com"
+]0;root@localhost:~/madhavi[root@localhost madhavi]# touch second.java
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git[Kt add second.java
+]0;root@localhost:~/madhavi[root@localhost madhavi]# g[Kgit add second.java[2Ptouch[C[C[C[C[C[C[C[C[C[C[C[Cgit config user.email "madhavi.allolimath@lntinfotech.com"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clog[Kstatus
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   second.java
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	madhavi.log
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git stt[Kat[K[K[K[Klog
+[?1h=commit 26272ec8ec87d25b0086a27704c61fde845394cb[m
+Author: madhavi.allolimath@lntinfotech.com <barani.v@lntinfotech.com>[m
+Date:   Mon Aug 1 16:20:25 2016 +0530[m
+[m
+    this is shell scripy[m
+[m
+commit 6765bbb7a81b69f7999bdac8824ff6ce6e438449[m
+Author: Barani Kumar <barani.v@lntinfotech.com>[m
+Date:   Mon Aug 1 15:40:53 2016 +0530[m
+[m
+    this is first code[m
+[K[?1l>]0;root@localhost:~/madhavi[root@localhost madhavi]# git commit -m:[K"sc[Kecond java"
+[master eec5e4b] second java
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 second.java
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git log
+[?1h=commit eec5e4b61d299a6dc0e97463f7a61d94efb5de2c[m
+Author: madhavi.allolimath@lntinfotech.com <madhavi.allolimath@lntinfotech.com>[m
+Date:   Mon Aug 1 16:23:41 2016 +0530[m
+[m
+    second java[m
+[m
+commit 26272ec8ec87d25b0086a27704c61fde845394cb[m
+Author: madhavi.allolimath@lntinfotech.com <barani.v@lntinfotech.com>[m
+Date:   Mon Aug 1 16:20:25 2016 +0530[m
+[m
+    this is shell scripy[m
+[m
+commit 6765bbb7a81b69f7999bdac8824ff6ce6e438449[m
+Author: Barani Kumar <barani.v@lntinfotech.com>[m
+Date:   Mon Aug 1 15:40:53 2016 +0530[m
+[m
+    this is first code[m
+[K[?1l>]0;root@localhost:~/madhavi[root@localhost madhavi]# git config --list
+push.default=matching
+user.name=Barani Kumar
+user.email=barani.v@lntinfotech.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+user.name=madhavi.allolimath@lntinfotech.com
+user.email=madhavi.allolimath@lntinfotech.com
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git config user.name "Madhavi"
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git config user.name "Madhavi"--list[K
+push.default=matching
+user.name=Barani Kumar
+user.email=barani.v@lntinfotech.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+user.name=Madhavi
+user.email=madhavi.allolimath@lntinfotech.com
+]0;root@localhost:~/madhavi[root@localhost madhavi]# ls -ltr
+total 20
+-rw-r--r--. 1 root root     0 Aug  1 15:42 first.java
+-rw-r--r--. 1 root root     0 Aug  1 16:20 unix.sh
+-rw-r--r--. 1 root root     0 Aug  1 16:22 second.java
+-rw-r--r--. 1 root root 20480 Aug  1 16:24 madhavi.log
+]0;root@localhost:~/madhavi[root@localhost madhavi]# cd ..
+]0;root@localhost:~[root@localhost ~]# ls -ltr
+total 8
+-rw-------. 1 root root 1491 Jul 27 14:06 anaconda-ks.cfg
+-rw-------. 1 root root 1539 Jul 27 14:10 initial-setup-ks.cfg
+drwxr-xr-x. 2 root root    6 Jul 27 14:15 [0m[01;34mTemplates[0m
+drwxr-xr-x. 2 root root    6 Jul 27 14:15 [01;34mPublic[0m
+drwxr-xr-x. 2 root root    6 Jul 27 14:15 [01;34mDownloads[0m
+drwxr-xr-x. 2 root root    6 Jul 27 14:15 [01;34mVideos[0m
+drwxr-xr-x. 2 root root    6 Jul 27 14:15 [01;34mPictures[0m
+drwxr-xr-x. 2 root root    6 Jul 27 14:15 [01;34mMusic[0m
+drwxr-xr-x. 2 root root    6 Jul 27 14:15 [01;34mDocuments[0m
+drwxr-xr-x. 3 root root   33 Aug  1 15:16 [01;34mkarthika[0m
+drwxr-xr-x. 3 root root   19 Aug  1 15:25 [01;34mkarthikahome[0m
+drwxr-xr-x. 3 root root   35 Aug  1 15:45 [01;34msadiq[0m
+drwxr-xr-x. 3 root root   33 Aug  1 15:52 [01;34mgr43011[0m
+drwxr-xr-x. 3 root root   22 Aug  1 15:53 [01;34mDesktop[0m
+drwxr-xr-x. 3 root root   84 Aug  1 16:22 [01;34mmadhavi[0m
+drwxr-xr-x. 3 root root   88 Aug  1 16:23 [01;34mbv03093[0m
+drwxr-xr-x. 2 root root   41 Aug  1 16:23 [01;34mpriyanka[0m
+]0;root@localhost:~[root@localhost ~]# cd madhavi/
+]0;root@localhost:~/madhavi[root@localhost madhavi]# ls -ltr
+total 20
+-rw-r--r--. 1 root root     0 Aug  1 15:42 first.java
+-rw-r--r--. 1 root root     0 Aug  1 16:20 unix.sh
+-rw-r--r--. 1 root root     0 Aug  1 16:22 second.java
+-rw-r--r--. 1 root root 20480 Aug  1 16:24 madhavi.log
+]0;root@localhost:~/madhavi[root@localhost madhavi]# mkdir scripts
+]0;root@localhost:~/madhavi[root@localhost madhavi]# touch firstscript.sh
+]0;root@localhost:~/madhavi[root@localhost madhavi]# touch secondscript.sh
+]0;root@localhost:~/madhavi[root@localhost madhavi]# mv firstscript.sh secondscript.sh scripts/
+]0;root@localhost:~/madhavi[root@localhost madhavi]# cd scripts/
+]0;root@localhost:~/madhavi/scripts[root@localhost scripts]# ls -ltr
+total 0
+-rw-r--r--. 1 root root 0 Aug  1 16:25 firstscript.sh
+-rw-r--r--. 1 root root 0 Aug  1 16:25 secondscript.sh
+]0;root@localhost:~/madhavi/scripts[root@localhost scripts]# cd ..
+]0;root@localhost:~/madhavi[root@localhost madhavi]# ls -ltr
+total 20
+-rw-r--r--. 1 root root     0 Aug  1 15:42 first.java
+-rw-r--r--. 1 root root     0 Aug  1 16:20 unix.sh
+-rw-r--r--. 1 root root     0 Aug  1 16:22 second.java
+-rw-r--r--. 1 root root 20480 Aug  1 16:24 madhavi.log
+drwxr-xr-x. 2 root root    49 Aug  1 16:26 [0m[01;34mscripts[0m
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git add scripts
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git log
+[?1h=commit eec5e4b61d299a6dc0e97463f7a61d94efb5de2c[m
+Author: madhavi.allolimath@lntinfotech.com <madhavi.allolimath@lntinfotech.com>[m
+Date:   Mon Aug 1 16:23:41 2016 +0530[m
+[m
+    second java[m
+[m
+commit 26272ec8ec87d25b0086a27704c61fde845394cb[m
+Author: madhavi.allolimath@lntinfotech.com <barani.v@lntinfotech.com>[m
+Date:   Mon Aug 1 16:20:25 2016 +0530[m
+[m
+    this is shell scripy[m
+[m
+commit 6765bbb7a81b69f7999bdac8824ff6ce6e438449[m
+Author: Barani Kumar <barani.v@lntinfotech.com>[m
+Date:   Mon Aug 1 15:40:53 2016 +0530[m
+[m
+    this is first code[m
+[K[?1l>]0;root@localhost:~/madhavi[root@localhost madhavi]# git commit -m"first directory"
+[master 3fe27b4] first directory
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 scripts/firstscript.sh
+ create mode 100644 scripts/secondscript.sh
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git log
+[?1h=commit 3fe27b4a311c304c5014cd3ecee472794392d813[m
+Author: Madhavi <madhavi.allolimath@lntinfotech.com>[m
+Date:   Mon Aug 1 16:26:48 2016 +0530[m
+[m
+    first directory[m
+[m
+commit eec5e4b61d299a6dc0e97463f7a61d94efb5de2c[m
+Author: madhavi.allolimath@lntinfotech.com <madhavi.allolimath@lntinfotech.com>[m
+Date:   Mon Aug 1 16:23:41 2016 +0530[m
+[m
+    second java[m
+[m
+commit 26272ec8ec87d25b0086a27704c61fde845394cb[m
+Author: madhavi.allolimath@lntinfotech.com <barani.v@lntinfotech.com>[m
+Date:   Mon Aug 1 16:20:25 2016 +0530[m
+[m
+    this is shell scripy[m
+[m
+commit 6765bbb7a81b69f7999bdac8824ff6ce6e438449[m
+Author: Barani Kumar <barani.v@lntinfotech.com>[m
+Date:   Mon Aug 1 15:40:53 2016 +0530[m
+[m
+    this is first code[m
+[K[?1l>]0;root@localhost:~/madhavi[root@localhost madhavi]# githobvi[K[K[K[K[K[K[K[Kvi
+[?1049h[?1h=[1;44r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[2;1H[1m[34m~                                                                                                                                                                       [3;1H~                                                                                                                                                                       [4;1H~                                                                                                                                                                       [5;1H~                                                                                                                                                                       [6;1H~                                                                                                                                                                       [7;1H~                                                                                                                                                                       [8;1H~                                                                                                                                                                       [9;1H~                                                                                                                                                                       [10;1H~                                                                                                                                                                       [11;1H~                                                                                                                                                                       [12;1H~                                                                                                                                                                       [13;1H~                                                                                                                                                                       [14;1H~                                                                                                                                                                       [15;1H~                                                                                                                                                                       [16;1H~                                                                                                                                                                       [17;1H~                                                                                                                                                                       [18;1H~                                                                                                                                                                       [19;1H~                                                                                                                                                                       [20;1H~                                                                                                                                                                       [21;1H~                                                                                                                                                                       [22;1H~                                                                                                                                                                       [23;1H~                                                                                                                                                                       [24;1H~                                                                                                                                                                       [25;1H~                                                                                                                                                                       [26;1H~                                                                                                                                                                       [27;1H~                                                                                                                                                                       [28;1H~                                                                                                                                                                       [29;1H~                                                                                                                                                                       [30;1H~                                                                                                                                                                       [31;1H~                                                                                                                                                                       [32;1H~                                                                                                                                                                       [33;1H~                                                                                                                                                                       [34;1H~                                                                                                                                                                       [35;1H~                                                                                                                                                                       [36;1H~                                                                                                                                                                       [37;1H~                                                                                                                                                                       [38;1H~                                                                                                                                                                       [39;1H~                                                                                                                                                                       [40;1H~                                                                                                                                                                       [41;1H~                                                                                                                                                                       [42;1H~                                                                                                                                                                       [43;1H~                                                                                                                                                                       [m[16;76HVIM - Vi IMproved[18;77Hversion 7.4.160[19;73Hby Bram Moolenaar et al.[20;68HModified by [34m<bugzilla@redhat.com>[m[21;63HVim is open source and freely distributable[23;70HHelp poor children in Uganda![24;62Htype  :help iccf[34m<Enter>[m       for information [26;62Htype  :q[34m<Enter>[m               to exit         [27;62Htype  :help[34m<Enter>[m  or  [34m<F1>[m  for on-line help[28;62Htype  :help version7[34m<Enter>[m   for version info[1;1H[?12l[?25h[?25l[44;1H:[?12l[?25hq![?25l[44;1H[K[44;1H[?1l>[?12l[?25h[?1049l]0;root@localhost:~/madhavi[root@localhost madhavi]# cd..[K[K ..
+]0;root@localhost:~[root@localhost ~]# ls -lr
+total 8
+drwxr-xr-x. 2 root root    6 Jul 27 14:15 [0m[01;34mVideos[0m
+drwxr-xr-x. 2 root root    6 Jul 27 14:15 [01;34mTemplates[0m
+drwxr-xr-x. 2 root root   40 Aug  1 16:36 [01;34msiddan[0m
+drwxr-xr-x. 3 root root   35 Aug  1 15:45 [01;34msadiq[0m
+drwxr-xr-x. 2 root root    6 Jul 27 14:15 [01;34mPublic[0m
+drwxr-xr-x. 3 root root   50 Aug  1 16:26 [01;34mpriyanka[0m
+drwxr-xr-x. 2 root root    6 Jul 27 14:15 [01;34mPictures[0m
+drwxr-xr-x. 2 root root    6 Jul 27 14:15 [01;34mMusic[0m
+drwxr-xr-x. 4 root root   98 Aug  1 16:26 [01;34mmadhavi[0m
+drwxr-xr-x. 3 root root   19 Aug  1 15:25 [01;34mkarthikahome[0m
+drwxr-xr-x. 3 root root   33 Aug  1 15:16 [01;34mkarthika[0m
+-rw-------. 1 root root 1539 Jul 27 14:10 initial-setup-ks.cfg
+drwxr-xr-x. 3 root root   33 Aug  1 15:52 [01;34mgr43011[0m
+drwxr-xr-x. 2 root root    6 Jul 27 14:15 [01;34mDownloads[0m
+drwxr-xr-x. 2 root root    6 Jul 27 14:15 [01;34mDocuments[0m
+drwxr-xr-x. 3 root root   22 Aug  1 15:53 [01;34mDesktop[0m
+drwxr-xr-x. 3 root root   88 Aug  1 16:23 [01;34mbv03093[0m
+-rw-------. 1 root root 1491 Jul 27 14:06 anaconda-ks.cfg
+]0;root@localhost:~[root@localhost ~]# ls -al
+total 76
+dr-xr-x---. 26 root root  4096 Aug  1 16:34 [0m[01;34m.[0m
+dr-xr-xr-x. 19 root root  4096 Aug  1 15:13 [01;34m..[0m
+-rw-------.  1 root root  1491 Jul 27 14:06 anaconda-ks.cfg
+-rw-------.  1 root root 13768 Aug  1 16:44 .bash_history
+-rw-r--r--.  1 root root    18 Dec 29  2013 .bash_logout
+-rw-r--r--.  1 root root   176 Dec 29  2013 .bash_profile
+-rw-r--r--.  1 root root   176 Dec 29  2013 .bashrc
+drwxr-xr-x.  3 root root    88 Aug  1 16:23 [01;34mbv03093[0m
+drwx------. 11 root root  4096 Jul 29 15:17 [01;34m.cache[0m
+drwxr-xr-x. 15 root root  4096 Jul 27 14:16 [01;34m.config[0m
+-rw-r--r--.  1 root root   100 Dec 29  2013 .cshrc
+drwxr-xr-x.  3 root root    22 Aug  1 15:53 [01;34mDesktop[0m
+drwxr-xr-x.  2 root root     6 Jul 27 14:15 [01;34mDocuments[0m
+drwxr-xr-x.  2 root root     6 Jul 27 14:15 [01;34mDownloads[0m
+-rw-------.  1 root root    16 Jul 27 14:15 .esd_auth
+drwxr-xr-x.  8 root root  4096 Aug  1 16:44 [01;34m.git[0m
+-rw-r--r--.  1 root root    89 Aug  1 15:15 .gitconfig
+drwxr-xr-x.  3 root root    33 Aug  1 15:52 [01;34mgr43011[0m
+-rw-------.  1 root root  1864 Aug  1 16:24 .ICEauthority
+-rw-------.  1 root root  1539 Jul 27 14:10 initial-setup-ks.cfg
+drwxr-xr-x.  3 root root    33 Aug  1 15:16 [01;34mkarthika[0m
+drwxr-xr-x.  3 root root    19 Aug  1 15:25 [01;34mkarthikahome[0m
+drwx------.  3 root root    18 Jul 27 14:15 [01;34m.local[0m
+drwxr-xr-x.  4 root root    98 Aug  1 16:26 [01;34mmadhavi[0m
+drwxr-xr-x.  4 root root    37 Jul 29 15:17 [01;34m.mozilla[0m
+drwxr-xr-x.  2 root root     6 Jul 27 14:15 [01;34mMusic[0m
+drwxr-xr-x.  2 root root     6 Jul 27 14:15 [01;34mPictures[0m
+drwxr-----.  3 root root    18 Aug  1 15:53 [01;34m.pki[0m
+drwxr-xr-x.  3 root root    50 Aug  1 16:26 [01;34mpriyanka[0m
+drwxr-xr-x.  2 root root     6 Jul 27 14:15 [01;34mPublic[0m
+drwxr-xr-x.  3 root root    16 Jul 27 14:15 [01;34m.redhat[0m
+drwxr-xr-x.  3 root root    35 Aug  1 15:45 [01;34msadiq[0m
+drwxr-xr-x.  2 root root    40 Aug  1 16:36 [01;34msiddan[0m
+drwx------.  2 root root    24 Aug  1 14:36 [01;34m.ssh[0m
+-rw-r--r--.  1 root root   129 Dec 29  2013 .tcshrc
+drwxr-xr-x.  2 root root     6 Jul 27 14:15 [01;34mTemplates[0m
+drwxr-xr-x.  2 root root     6 Jul 27 14:15 [01;34mVideos[0m
+]0;root@localhost:~[root@localhost ~]# cd madhavi/
+]0;root@localhost:~/madhavi[root@localhost madhavi]# ls -al
+total 44
+drwxr-xr-x.  4 root root    98 Aug  1 16:26 [0m[01;34m.[0m
+dr-xr-x---. 26 root root  4096 Aug  1 16:34 [01;34m..[0m
+-rw-r--r--.  1 root root     0 Aug  1 15:42 first.java
+drwxr-xr-x.  8 root root  4096 Aug  1 16:26 [01;34m.git[0m
+-rw-r--r--.  1 root root 36864 Aug  1 16:48 madhavi.log
+drwxr-xr-x.  2 root root    49 Aug  1 16:26 [01;34mscripts[0m
+-rw-r--r--.  1 root root     0 Aug  1 16:22 second.java
+-rw-r--r--.  1 root root     0 Aug  1 16:20 unix.sh
+]0;root@localhost:~/madhavi[root@localhost madhavi]# vi
+[?1049h[?1h=[1;44r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[2;1H[1m[34m~                                                                                                                                                                       [3;1H~                                                                                                                                                                       [4;1H~                                                                                                                                                                       [5;1H~                                                                                                                                                                       [6;1H~                                                                                                                                                                       [7;1H~                                                                                                                                                                       [8;1H~                                                                                                                                                                       [9;1H~                                                                                                                                                                       [10;1H~                                                                                                                                                                       [11;1H~                                                                                                                                                                       [12;1H~                                                                                                                                                                       [13;1H~                                                                                                                                                                       [14;1H~                                                                                                                                                                       [15;1H~                                                                                                                                                                       [16;1H~                                                                                                                                                                       [17;1H~                                                                                                                                                                       [18;1H~                                                                                                                                                                       [19;1H~                                                                                                                                                                       [20;1H~                                                                                                                                                                       [21;1H~                                                                                                                                                                       [22;1H~                                                                                                                                                                       [23;1H~                                                                                                                                                                       [24;1H~                                                                                                                                                                       [25;1H~                                                                                                                                                                       [26;1H~                                                                                                                                                                       [27;1H~                                                                                                                                                                       [28;1H~                                                                                                                                                                       [29;1H~                                                                                                                                                                       [30;1H~                                                                                                                                                                       [31;1H~                                                                                                                                                                       [32;1H~                                                                                                                                                                       [33;1H~                                                                                                                                                                       [34;1H~                                                                                                                                                                       [35;1H~                                                                                                                                                                       [36;1H~                                                                                                                                                                       [37;1H~                                                                                                                                                                       [38;1H~                                                                                                                                                                       [39;1H~                                                                                                                                                                       [40;1H~                                                                                                                                                                       [41;1H~                                                                                                                                                                       [42;1H~                                                                                                                                                                       [43;1H~                                                                                                                                                                       [m[16;76HVIM - Vi IMproved[18;77Hversion 7.4.160[19;73Hby Bram Moolenaar et al.[20;68HModified by [34m<bugzilla@redhat.com>[m[21;63HVim is open source and freely distributable[23;70HHelp poor children in Uganda![24;62Htype  :help iccf[34m<Enter>[m       for information [26;62Htype  :q[34m<Enter>[m               to exit         [27;62Htype  :help[34m<Enter>[m  or  [34m<F1>[m  for on-line help[28;62Htype  :help version7[34m<Enter>[m   for version info[1;1H[?12l[?25h[?25l[44;1H[1m-- INSERT --[1;1H[?12l[?25h[m[44;1H[K[1;1H[?25l[?12l[?25h[?25l[44;1H:[?12l[?25hq![?25l[44;1H[K[44;1H[?1l>[?12l[?25h[?1049l]0;root@localhost:~/madhavi[root@localhost madhavi]# pwd
+/root/madhavi
+]0;root@localhost:~/madhavi[root@localhost madhavi]# cd .git
+]0;root@localhost:~/madhavi/.git[root@localhost .git]# ls -ltr
+total 28
+drwxr-xr-x.  4 root root   29 Aug  1 15:39 [0m[01;34mrefs[0m
+-rw-r--r--.  1 root root   73 Aug  1 15:39 description
+drwxr-xr-x.  2 root root    6 Aug  1 15:39 [01;34mbranches[0m
+drwxr-xr-x.  2 root root   20 Aug  1 15:39 [01;34minfo[0m
+drwxr-xr-x.  2 root root 4096 Aug  1 15:39 [01;34mhooks[0m
+-rw-r--r--.  1 root root   23 Aug  1 15:39 HEAD
+drwxr-xr-x.  3 root root   28 Aug  1 15:40 [01;34mlogs[0m
+-rw-r--r--.  1 root root  159 Aug  1 16:24 config
+-rw-r--r--.  1 root root  440 Aug  1 16:26 index
+-rw-r--r--.  1 root root   16 Aug  1 16:26 COMMIT_EDITMSG
+drwxr-xr-x. 13 root root 4096 Aug  1 16:26 [01;34mobjects[0m
+]0;root@localhost:~/madhavi/.git[root@localhost .git]# cd ..
+]0;root@localhost:~/madhavi[root@localhost madhavi]# git^C
+]0;root@localhost:~/madhavi[root@localhost madhavi]# vi
+[?1049h[?1h=[1;44r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[2;1H[1m[34m~                                                                                                                                                                       [3;1H~                                                                                                                                                                       [4;1H~                                                                                                                                                                       [5;1H~                                                                                                                                                                       [6;1H~                                                                                                                                                                       [7;1H~                                                                                                                                                                       [8;1H~                                                                                                                                                                       [9;1H~                                                                                                                                                                       [10;1H~                                                                                                                                                                       [11;1H~                                                                                                                                                                       [12;1H~                                                                                                                                                                       [13;1H~                                                                                                                                                                       [14;1H~                                                                                                                                                                       [15;1H~                                                                                                                                                                       [16;1H~                                                                                                                                                                       [17;1H~                                                                                                                                                                       [18;1H~                                                                                                                                                                       [19;1H~                                                                                                                                                                       [20;1H~                                                                                                                                                                       [21;1H~                                                                                                                                                                       [22;1H~                                                                                                                                                                       [23;1H~                                                                                                                                                                       [24;1H~                                                                                                                                                                       [25;1H~                                                                                                                                                                       [26;1H~                                                                                                                                                                       [27;1H~                                                                                                                                                                       [28;1H~                                                                                                                                                                       [29;1H~                                                                                                                                                                       [30;1H~                                                                                                                                                                       [31;1H~                                                                                                                                                                       [32;1H~                                                                                                                                                                       [33;1H~                                                                                                                                                                       [34;1H~                                                                                                                                                                       [35;1H~                                                                                                                                                                       [36;1H~                                                                                                                                                                       [37;1H~                                                                                                                                                                       [38;1H~                                                                                                                                                                       [39;1H~                                                                                                                                                                       [40;1H~                                                                                                                                                                       [41;1H~                                                                                                                                                                       [42;1H~                                                                                                                                                                       [43;1H~                                                                                                                                                                       [m[16;76HVIM - Vi IMproved[18;77Hversion 7.4.160[19;73Hby Bram Moolenaar et al.[20;68HModified by [34m<bugzilla@redhat.com>[m[21;63HVim is open source and freely distributable[23;70HHelp poor children in Uganda![24;62Htype  :help iccf[34m<Enter>[m       for information [26;62Htype  :q[34m<Enter>[m               to exit         [27;62Htype  :help[34m<Enter>[m  or  [34m<F1>[m  for on-line help[28;62Htype  :help version7[34m<Enter>[m   for version info[1;1H[?12l[?25h[?25l[44;1H:[?12l[?25hq![?25l[44;1H[K[44;1H[?1l>[?12l[?25h[?1049l]0;root@localhost:~/madhavi[root@localhost madhavi]# ifconfig -a
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 02:42:af:40:5d:28  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.28.3.74  netmask 255.255.255.0  broadcast 172.28.3.255
+        inet6 fe80::215:5dff:fefe:2225  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:fe:22:25  txqueuelen 1000  (Ethernet)
+        RX packets 45310  bytes 7198977 (6.8 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 24760  bytes 2229755 (2.1 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 0  (Local Loopback)
+        RX packets 104  bytes 8820 (8.6 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 104  bytes 8820 (8.6 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
+        ether 52:54:00:19:1d:41  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0-nic: flags=4098<BROADCAST,MULTICAST>  mtu 1500
+        ether 52:54:00:19:1d:41  txqueuelen 500  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+]0;root@localhost:~/madhavi[root@localhost madhavi]# vi
+[?1049h[?1h=[1;44r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[2;1H[1m[34m~                                                                                                                                                                       [3;1H~                                                                                                                                                                       [4;1H~                                                                                                                                                                       [5;1H~                                                                                                                                                                       [6;1H~                                                                                                                                                                       [7;1H~                                                                                                                                                                       [8;1H~                                                                                                                                                                       [9;1H~                                                                                                                                                                       [10;1H~                                                                                                                                                                       [11;1H~                                                                                                                                                                       [12;1H~                                                                                                                                                                       [13;1H~                                                                                                                                                                       [14;1H~                                                                                                                                                                       [15;1H~                                                                                                                                                                       [16;1H~                                                                                                                                                                       [17;1H~                                                                                                                                                                       [18;1H~                                                                                                                                                                       [19;1H~                                                                                                                                                                       [20;1H~                                                                                                                                                                       [21;1H~                                                                                                                                                                       [22;1H~                                                                                                                                                                       [23;1H~                                                                                                                                                                       [24;1H~                                                                                                                                                                       [25;1H~                                                                                                                                                                       [26;1H~                                                                                                                                                                       [27;1H~                                                                                                                                                                       [28;1H~                                                                                                                                                                       [29;1H~                                                                                                                                                                       [30;1H~                                                                                                                                                                       [31;1H~                                                                                                                                                                       [32;1H~                                                                                                                                                                       [33;1H~                                                                                                                                                                       [34;1H~                                                                                                                                                                       [35;1H~                                                                                                                                                                       [36;1H~                                                                                                                                                                       [37;1H~                                                                                                                                                                       [38;1H~                                                                                                                                                                       [39;1H~                                                                                                                                                                       [40;1H~                                                                                                                                                                       [41;1H~                                                                                                                                                                       [42;1H~                                                                                                                                                                       [43;1H~                                                                                                                                                                       [m[16;76HVIM - Vi IMproved[18;77Hversion 7.4.160[19;73Hby Bram Moolenaar et al.[20;68HModified by [34m<bugzilla@redhat.com>[m[21;63HVim is open source and freely distributable[23;70HBecome a registered Vim user![24;62Htype  :help register[34m<Enter>[m   for information [26;62Htype  :q[34m<Enter>[m               to exit         [27;62Htype  :help[34m<Enter>[m  or  [34m<F1>[m  for on-line help[28;62Htype  :help version7[34m<Enter>[m   for version info[1;1H[?12l[?25h[?25l[44;1H:[?12l[?25hq![?25l[44;1H[K[44;1H[?1l>[?12l[?25h[?1049l]0;root@localhost:~/madhavi[root@localhost madhavi]# cd /home
+]0;root@localhost:/home[root@localhost home]# mkdir X-madhavi
+]0;root@localhost:/home[root@localhost home]# touch myfirstfile.txt
+]0;root@localhost:/home[root@localhost home]# git add myfirstfile.txt
+fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+]0;root@localhost:/home[root@localhost home]# cd X-madhavi
+]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# git init
+Initialized empty Git repository in /home/X-madhavi/.git/
+]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# touch myfirstfile.txt
+]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# git add myfirstfile.txt
+]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# git commit -m"myfirstcommit"
+[master (root-commit) 8828add] myfirstcommit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 myfirstfile.txt
+]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# mkdir test1 test2 test3
+]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# touch test1/test1
+]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# touch test2/tect2
+]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# touch test3/test3
+]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# git add test1 test2 test3
+]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# git commit -m"my three firs[K[K[K[Kfiles nad[K[K[Kand three directories"
+[master a351893] my three files and three directories
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1/test1
+ create mode 100644 test2/tect2
+ create mode 100644 test3/test3
+]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# vi myfirstfile.txt
+[?1049h[?1h=[1;44r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[44;1H"myfirstfile.txt" 0L, 0C[2;1H[1m[34m~                                                                                                                                                                       [3;1H~                                                                                                                                                                       [4;1H~                                                                                                                                                                       [5;1H~                                                                                                                                                                       [6;1H~                                                                                                                                                                       [7;1H~                                                                                                                                                                       [8;1H~                                                                                                                                                                       [9;1H~                                                                                                                                                                       [10;1H~                                                                                                                                                                       [11;1H~                                                                                                                                                                       [12;1H~                                                                                                                                                                       [13;1H~                                                                                                                                                                       [14;1H~                                                                                                                                                                       [15;1H~                                                                                                                                                                       [16;1H~                                                                                                                                                                       [17;1H~                                                                                                                                                                       [18;1H~                                                                                                                                                                       [19;1H~                                                                                                                                                                       [20;1H~                                                                                                                                                                       [21;1H~                                                                                                                                                                       [22;1H~                                                                                                                                                                       [23;1H~                                                                                                                                                                       [24;1H~                                                                                                                                                                       [25;1H~                                                                                                                                                                       [26;1H~                                                                                                                                                                       [27;1H~                                                                                                                                                                       [28;1H~                                                                                                                                                                       [29;1H~                                                                                                                                                                       [30;1H~                                                                                                                                                                       [31;1H~                                                                                                                                                                       [32;1H~                                                                                                                                                                       [33;1H~                                                                                                                                                                       [34;1H~                                                                                                                                                                       [35;1H~                                                                                                                                                                       [36;1H~                                                                                                                                                                       [37;1H~                                                                                                                                                                       [38;1H~                                                                                                                                                                       [39;1H~                                                                                                                                                                       [40;1H~                                                                                                                                                                       [41;1H~                                                                                                                                                                       [42;1H~                                                                                                                                                                       [43;1H~                                                                                                                                                                       [1;1H[?12l[?25h[?25l[m[44;1H[1m-- INSERT --[m[44;13H[K[1;1H[?12l[?25h[44;1H[K[1;1H[?25l[?12l[?25h[?25l[44;1H[1m-- INSERT --[1;1H[?12l[?25h[?25l[mt[?12l[?25h[?25lh[?12l[?25h[?25li[?12l[?25h[?25ls[?12l[?25h[?25l [?12l[?25h[?25li[?12l[?25h[?25ls[?12l[?25h[?25l [?12l[?25h[?25lm[?12l[?25h[?25ly[?12l[?25h[?25l [?12l[?25h[?25lf[?12l[?25h[?25li[?12l[?25h[?25lr[?12l[?25h[?25ls[?12l[?25h[?25lt[?12l[?25h[?25l [?12l[?25h[?25ll[?12l[?25h[?25li[?12l[?25h[?25ln[?12l[?25h[?25le[?12l[?25h[?25l [?12l[?25h[?25lo[?12l[?25h[?25lf[?12l[?25h[?25l [?12l[?25h[?25lc[?12l[?25h[?25lo[?12l[?25h[?25le[?12l[?25h[?25l[1;28H[K[1;28H[?12l[?25h[?25l[1;27H[K[1;27H[?12l[?25h[?25lo[?12l[?25h[?25ld[?12l[?25h[?25le[?12l[?25h[?25l"[?12l[?25h[?25l[1;30H[K[1;30H[?12l[?25h[44;1H[K[1;29H[?25l[?12l[?25h[?25l[44;1H:[?12l[?25hwq![?25l"myfirstfile.txt" 1L, 30C written
+[?1l>[?12l[?25h[?1049l]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# git commit "i modified myfirstfile.txt"
+error: pathspec 'i modified myfirstfile.txt' did not match any file(s) known to git.
+]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# git commit -m"[K"i modified myfirstfile.txt"
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   myfirstfile.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# git log
+[?1h=commit a3518930319928375dc1acb256daef1420ec024a[m
+Author: Barani Kumar <barani.v@lntinfotech.com>[m
+Date:   Mon Aug 1 17:27:36 2016 +0530[m
+[m
+    my three files and three directories[m
+[m
+commit 8828add131f6df44a4d55800befb9eb71486fcea[m
+Author: Barani Kumar <barani.v@lntinfotech.com>[m
+Date:   Mon Aug 1 17:25:52 2016 +0530[m
+[m
+    myfirstcommit[m
+[K[?1l>]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   myfirstfile.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;root@localhost:/home/X-madhavi[root@localhost X-madhavi]# vi
+[?1049h[?1h=[1;44r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[2;1H[1m[34m~                                                                                                                                                                       [3;1H~                                                                                                                                                                       [4;1H~                                                                                                                                                                       [5;1H~                                                                                                                                                                       [6;1H~                                                                                                                                                                       [7;1H~                                                                                                                                                                       [8;1H~                                                                                                                                                                       [9;1H~                                                                                                                                                                       [10;1H~                                                                                                                                                                       [11;1H~                                                                                                                                                                       [12;1H~                                                                                                                                                                       [13;1H~                                                                                                                                                                       [14;1H~                                                                                                                                                                       [15;1H~                                                                                                                                                                       [16;1H~                                                                                                                                                                       [17;1H~                                                                                                                                                                       [18;1H~                                                                                                                                                                       [19;1H~                                                                                                                                                                       [20;1H~                                                                                                                                                                       [21;1H~                                                                                                                                                                       [22;1H~                                                                                                                                                                       [23;1H~                                                                                                                                                                       [24;1H~                                                                                                                                                                       [25;1H~                                                                                                                                                                       [26;1H~                                                                                                                                                                       [27;1H~                                                                                                                                                                       [28;1H~                                                                                                                                                                       [29;1H~                                                                                                                                                                       [30;1H~                               

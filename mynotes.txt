@@ -1,0 +1,263 @@
+172.28.2.251 - shared drive
+
+my server : 172.28.3.110,172.28.3.135
+
+https://docs.chef.io
+https://github.com
+https://learn.chef.io/
+https://supermarket.chef/io
+https://docs.chef.io/chef_client.html
+https://devops.org
+https://DevOpsO.com
+https://scmgalaxy.com
+https://hub.docker.com/
+https://devopsschool.com/slides/
+https://stackoverflow.com
+http://scmgalaxy.com/tag/docker.html
+
+ohai
+
+unset HTTP_PROXY
+unset HTTPS_PROXY
+unset http_proxy
+unset https_proxy
+
+export http_proxy=http://172.28.1.12:9991/
+export https_proxy=https://172.28.1.12:9991/
+export HTTP_PROXY=https://172.28.1.12:9991/
+export HTTPS_PROXY=https://172.28.1.12:9991/
+
+systemctl restart network
+systemctl stop firewalld
+ps -eaf | grep -i yum
+
+---installing chef dk-------------------------
+
+chmod 755 chefdk-0.15.16-1.el7.x86_64.rpm
+rpm -ivh chefdk-0.15.16-1.el7.x86_64.rpm
+chef -v
+
+--------------------------------------------------
+
+chef-apply rubyscript - is to run the recipe
+chef generate cookbook cookbookname - is to generate cookbook
+chef-client --local-mode --runlist 'Recipe[cookbookname]' - is to run the recipes in the cookbook which feteched the default.rb
+chef-client --local-mode --runlist 'Recipe[cookbookname::recipe1]' - is to run the recipes recipe1 present in the cookbook.
+edit the default.rb and include the below line to make a particular recipe to run
+include_recipe 'cookbookname::recipe1' 
+include_recipe '::recipe1' - it will fetch the current cookbook
+
+-----knife commands --------------------------------------------------------
+
+knife cookbook upload cookbook
+knife cookbook upload cheflnt --> is to upload cookbook in the chef server
+
+knife bootstrap -N nodename IPaddress -x user-P password-sudo
+knife bootstrap -N madhavi 172.28.3.110 -x root -P root123 -sudo --> is to add node in the chef server
+
+knife bootstrap {{address}} --ssh-user {{user}} --ssh-password '{{password}}' --sudo --use-sudo-password --node-name node1 --runlist 'recipe[learn_chef_apache2]'
+knife bootstrap {{172.28.3.110}} --ssh-user root --ssh-password 'root123' --sudo --use-sudo-password --node-name mallolimath --runlist 'recipe[ckbklnt]'
+
+knife ssh{{address}} 'sudo chef-client' --manual-list --ssh-user {{user}} --ssh-password '{{password}}'
+
+ssh username@ipaddress -i mycredentials.pem sudo chef-client
+
+----------------------------------------------------------------------------
+
+---installing chef server-----------------------------------------------------------------------------------------------------------
+
+rpm -Uvh chef-server-core-12.8.0-1.el7.x86_64 (1).rpm  - centos - as a root user - to install chef server
+
+edit the /etc/hosts file as if its outside n/w using dns it will fetch(hence hardcoding)
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+127.0.1.1 172.28.3.135 chef-server
+127.0.0.1 localhost
+172.28.3.135 172.28.3.135 chef-server
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6 chef-server
+
+save the file
+
+hostnamectl set-hostname chef-server - run this to set it a name to the chef server - chef-server is the chef servername we used
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+---configuring the chef server--------------------------------------
+chef-server-ctl reconfigure
+chef-server-ctl status
+sudo chef-server-ctl test - t test if the configuration is correct
+--------------------------------------------------------------------
+
+chef-server-ctl user-create user_name Firstname Lastname Email 'password' --filename /etc/chef/username.pem
+chef-server-ctl user-create mallolimath Madhavi Allolimath mallolimath@gmail.com 'H0llyw00d' --filename /etc/chef/mallolimath.pem
+chef-server-ctl user-list - to show the users created
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+chef-server-ctl org-create short_name 'full_organisation_name' --association_user user_name --filename /etc/chef/ORGANISATION=validator.pem
+chef-server-ctl org-create 4thcoffee 'Fourth Coffee, Inc,' --association_user mallolimath --filename /etc/chef/4thcoffee-validator.pem
+chef-server-ctl org-show - to show the org created
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+modify the knife.rb in node machine and update the chef-server url and username and org details
+knife clinet list - will display the organisation
+if the above throws ssl error
+
+then fix is as below
+
+[root@chef-server ~]# cd /var/opt/opscode/nginx/ca
+[root@chef-server ca]# ls -ltr
+total 12
+-rw-r--r--. 1 root root 1354 Aug  3 12:22 172.28.3.135.crt
+-rw-r--r--. 1 root root 1679 Aug  3 12:22 172.28.3.135.key
+-rw-r--r--. 1 root root  424 Aug  3 12:23 dhparams.pem
+[root@chef-server ca]# scp 172.28.3.135.crt root@172.28.3.110:/root/madhavi/chef-repo/.chef/trusted_certs
+root@172.28.3.110's password:
+172.28.3.135.crt                                                                                                                      100% 1354     1.3KB/s   00:00
+[root@chef-server ca]#
+
+another way
+unset https_proxy
+knife ssl fetch http://IP address
+--------------------------------------------------------------------------------------------------------------------------------------------
+chef-server-ctl install chef-manage - open the GUI
+opscode-manage-ctl reconfigure --accept-license -- once its opened , we ahve to make it upto date
+chef-server-ctl status
+https://masterIP address
+ID : we created in master using create_user
+--------------------------------------------------------------------------------------------------------------------------------------------
+knife role create rolename
+
+name "web_server"
+description "Role for web servers"
+run_list(
+"role[base]',
+"recipe{web_server""
+)
+]
+
+{
+  "name": "mrule1",
+  "description": "my 2nd rule",
+  "run_list": [
+"recipe[ckbklnt]"
+  ]
+
+knife ssh "role:webserver" "sudo chef-client"
+knife bootstrap --runlist "role[web_server]" --sudo hostname
+
+
+------------------------------------------------------------------------
+
+ 1054  knife role edit mrule
+ 1055  knife role show mrule
+ 1056  knife node edit allolimathm
+ 1057  knife node edit mallolimath
+ 1058  clear
+ 1059  knife ssh "role:mrule" "sudo chef-client"
+ 1060  knife node list
+
+
+----------------------------------------------------------------------------------
+
+knife cookbook site download tomcat
+knife cookbook site list
+----------------------------------------------
+
+no # in template , we should use %  - for attributes
+--------------------------------------------------
+
+chef code correctness(chef code analysis)
+foodcritic
+rubocop
+
+chef unit testing
+chefSpec
+
+chef integration testing
+testkitchen
+serverspec
+rspec
+
+----------------------------------------------------
+
+gsh - linux
+dsh - windows
+
+-----------------------------------------------------
+
+knife data bag create users user_name
+
+---------------------------------------
+docker
+yum install docker
+which docker
+docker -v
+systemctl start docker
+systemctl status docker
+systemctl stop docker
+docker info
+docker images
+docker ps - shows running process
+docker pull jenkins - pull the images
+dockerrmi jenkins -to remove the image
+docker rm containerID - to remove the container assiciated with images
+docker rm $(docker ps -a --filter 'exited=0')
+docker ps -a | grep Exit | cut -d '' -f 1 | xargs sudo docker rm -> to remove the exited container 
+docker exec -i -t containerid /bin/bash (take the respective container id to go to the container)
+sudo docker attach containerid
+
+
+rhel
+sudo yum install docker
+sudo yum install docker-engine
+docker -v
+systemctl start docker
+
+ubantu
+sudo apt-get install docker
+sudo apt-get install docker.io
+docker -v
+service docker start
+
+docker run -d -p 8070:8080 -p 50030:50000 -u root --name "myjenkins1" -v $PWD/jenkins:/var/jenkins_home jenkins
+-d -> to run in background
+--name -> name to container
+
+docker stop containerID
+docker start containerID
+
+
+docker run -d --name nexus1 -p 8082:8081 sonatype/nexus
+docker run -it ubuntu /bin/bash
+
+
+------------------------------------------------------- 
+
+docker run -i -t training/sinatra /bin/bash - pull the sinatra from hub and goes to container
+apt-get install git - install git in sinatra
+docker commit -m "added git " -a "madhavi" containerid scmgalaxy/sinatra:v2 - is to commit and upload the built image
+docker run -i -t scmgalaxy/sinatra:v2 /bin/bash - pull the sinatra from scmgalaxy and goes to container
+
+mkdir sinatra1
+cd sinatra1
+vi Dockerfile
+FROM ubuntu:14.04
+MAINTAINER Madhavi <mallolimath@gmail.com>
+RUN apt-get install git
+RUN touch xyz.conf
+
+docker build -t scmgalaxy/sinatra1:v2 .
+
+-----------------------------------------------------------
+
+docker run -d -p 8060:8080 -u root --name "myjenkins7" -v $PWD/jenkins:/var/jenkins_home jenkins
+
+http://172.28.3.110:8060
+
+sysctl -w net.ipv4.ip_forward=1 - for IPv4 issues
+
+---------------------------------------------------------
+
+
+
+
